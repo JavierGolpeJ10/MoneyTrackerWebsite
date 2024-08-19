@@ -3,25 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        .title{
-            padding-top: 210px;
-            text-align: center;
-            font-size: 58px;
+        
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the elements horizontally */
+            justify-content: center; /* Centers the elements vertically */
+            height: 100vh; /* Sets the height to fill the viewport */
         }
         
-        .login{
-            text-align: center;
-            border-radius: 25px;
+        .title {
+            font-family: "Apple Braille";
+            margin-bottom: 20px; /* Adds space below the title */
+            font-size: 54px; /* Adjusts the size of the title */
+        }
+        
+
+        .input {
+            margin: 10px 0; /* Adds space between the input fields */
+            padding: 10px; /* Adds padding inside the input fields */
+            width: 200px; /* Sets a fixed width for the input fields */
+            border-radius: 20px;
+        }
+        
+        #button {
+            margin-top: 20px;
+            transition: all 0.4s ease;
+            font-size: 15px;
+            padding: 10px;
+            width: 210px;
+            color: #ededed;
+            background-color: #0080FF;
+            border-color: Transparent;/* top | right | bottom | left */
+            border-width:1px 1px 1px 1px;
+            border-radius: 20px;
+        }
+        
+        #button:hover {
+            cursor: pointer;
+            background-color: #ffdc00;
         }
     </style>
     
 </head>
 <body>
+    <div class="form-container">
         <h1 class="title"> Saving For The Future </h1>
-        <div class="login">
-            <input type="text" name="text">
-            <label class="label">Login</label>
-        </div>
+        <table>
+            <tr>
+                <input type="text" name="username" class="input" placeholder="Username">
+            </tr>
+            <tr>
+                <input type="password" name="password" class="input" placeholder="Password">
+            </tr>
+        </table>
+        <input type="submit" id="button">
+    </div>
 </body>
 </html>
