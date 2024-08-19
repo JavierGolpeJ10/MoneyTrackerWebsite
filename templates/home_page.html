@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family:"Apple Braille", Arial, sans-serif; /* Set a default font */
+        }
+
+        .tab-bar {
+            display: flex;
+            justify-content: flex-end; /* Pushes the tabs to the right within the nav */
+            position: fixed; /* Fix the position at the top */
+            top: 0; /* Align the bar to the top */
+            right: 0; /* Align the bar to the left */
+            background-color: #333; /* Background color of the tab bar */
+            padding: 10px; /* Padding around the tabs */
+            width: 100%; /* Make the tab bar span the full width of the page */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        .tab {
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline */
+            padding: 10px 20px; /* Padding inside each tab */
+            margin-left: 10px; /* Space between tabs */
+            border-radius: 5px; /* Slightly round the edges */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .tab:hover {
+            background-color: #555; /* Change background color on hover */
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Welcome to Home Page!</h1>
+    <div>
+        <nav class="tab-bar">
+            <a href="#" class="tab">Savings</a>
+            <a href="#" class="tab">Spending</a>
+            <a href="#" class="tab">Logout</a>
+        </nav>
+    </div>
 </body>
 </html>
