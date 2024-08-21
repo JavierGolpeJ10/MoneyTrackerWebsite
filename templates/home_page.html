@@ -35,10 +35,99 @@
         .tab:hover {
             background-color: #555; /* Change background color on hover */
         }
+        
+        .top-header{
+            margin-top: 80px; 
+            text-align: left; 
+            padding-left: 40px;
+            font-family: "Apple Braille", Arial, serif;
+            font-size: 40px;
+        }
+        
+        .sub-header {
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: left; 
+            padding-left: 45px;
+            font-family: "Apple Braille", Arial, serif;
+            font-size: medium;
+        }
+        
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .card-header {
+            font-size: 1.25em; /* Slightly larger font for the header */
+            margin-bottom: 5px; /* Less margin below the header */
+            margin-top: 20px; /* More margin above the header to separate it from the previous content */
+        }
+
+        /* Individual card wrapper to control spacing */
+        .card-wrapper {
+            flex: 1; /* Allow the card to expand to fit available space */
+        }
+        
+        .info-card {
+            display: flex; /* Aligns items horizontally */
+            align-items: center; /* Centers the content vertically within the card */
+            background-color: #f4f4f4; /* Background color of the card */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            padding: 20px 20px 20px 25px; /* Padding inside the card */
+            max-width: 500px; /* Maximum width of the card */
+            margin-right: 5px;
+            height: 200px;
+            flex: initial;
+        }
+        
+        .info-card2 {
+            display: flex; /* Aligns items horizontally */
+            align-items: center; /* Centers the content vertically within the card */
+            background-color: #f4f4f4; /* Background color of the card */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            padding: 20px; /* Padding inside the card */
+            max-width: 500px; /* Maximum width of the card */
+            margin: 0 0 0px 955px; /* Center the card on the page with some margin */
+        }
+        
+        .card-image {
+            width: 100px; /* Set the width of the image */
+            height: 100px; /* Set the height of the image */
+            border-radius: 50%; /* Optional: Make the image circular */
+            margin-right: 20px; /* Space between the image and the text */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+        
+        .card-image2 {
+            width: auto; /* Set the width of the image */
+            height: auto; /* Set the height of the image */
+            align-items: center;
+            border-radius: 10%; /* Optional: Make the image circular */
+            margin-right: 20px; /* Space between the image and the text */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+        
+        .card-content {
+            flex: 1; /* Allow the content to take up the remaining space */
+        }
+        
+        .card-content h3 {
+            margin: 0 0 10px; /* Margin around the title */
+            font-size: 1.5em; /* Font size of the title */
+        }
+        
+        .card-content p {
+            margin: 0; /* Remove default margin for the paragraph */
+            color: #555; /* Text color for the content */
+        }
+
     </style>
 </head>
 <body>
-    <h1>Welcome to Home Page!</h1>
     <div>
         <nav class="tab-bar">
             <a href="#" class="tab">Savings</a>
@@ -46,5 +135,46 @@
             <a href="#" class="tab">Logout</a>
         </nav>
     </div>
+    <h1 class="top-header">Welcome!</h1>
+    <h2 class="sub-header">August 20, 2024</h2>
+    
+    <div class="card-container">
+        <div class="info-card">
+            <img src="https://printingsolutions.com/wp-content/uploads/2020/12/cmyk.jpg" 
+                 alt="Card Image" class="card-image">
+            <div class="card-content">
+                <h3>User Snapshot</h3>
+                <p>This is some descriptive text for the info card. It can include more details, links, 
+                or any other relevant information.</p>
+            </div>
+        </div>
+        
+        <div class="info-card">
+            <img src="https://media.brainly.com/image/rs:fill/w:750/q:75/plain/https://us-static.z-dn.net/files/d12/b8f195bae18562e7cd9cfe23a573d955.jpg" alt="Card Image" class="card-image2">
+        </div>
+    </div>
+    
+    
+    
+    <div class="card-container">
+        <div class="card-wrapper">
+            <h3 class="card-header" style="margin-top: 10px">Overview</h3>
+            <div class="info-card">
+                <div class="card-content">
+                    <p>This is some descriptive text for the info card. It can include more details, links, 
+                    or any other relevant information.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-wrapper">
+            <h3 class="card-header" style="margin-top: 10px">August Top Expenses</h3>
+            <div class="info-card">
+                <img src="https://media.brainly.com/image/rs:fill/w:750/q:75/plain/https://us-static.z-dn.net/files/d12/b8f195bae18562e7cd9cfe23a573d955.jpg" alt="Card Image" class="card-image2">
+            </div>
+        </div>
+    </div>
+    
+    
 </body>
 </html>
