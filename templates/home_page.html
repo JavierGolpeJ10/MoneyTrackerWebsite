@@ -53,6 +53,23 @@
             font-size: medium;
         }
         
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .card-header {
+            font-size: 1.25em; /* Slightly larger font for the header */
+            margin-bottom: 5px; /* Less margin below the header */
+            margin-top: 20px; /* More margin above the header to separate it from the previous content */
+        }
+
+        /* Individual card wrapper to control spacing */
+        .card-wrapper {
+            flex: 1; /* Allow the card to expand to fit available space */
+        }
+        
         .info-card {
             display: flex; /* Aligns items horizontally */
             align-items: center; /* Centers the content vertically within the card */
@@ -61,8 +78,9 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
             padding: 20px 20px 20px 25px; /* Padding inside the card */
             max-width: 500px; /* Maximum width of the card */
-            margin: 20px; /* Center the card on the page with some margin */
+            margin-right: 5px;
             height: 200px;
+            flex: initial;
         }
         
         .info-card2 {
@@ -119,7 +137,8 @@
     </div>
     <h1 class="top-header">Welcome!</h1>
     <h2 class="sub-header">August 20, 2024</h2>
-    <div>
+    
+    <div class="card-container">
         <div class="info-card">
             <img src="https://printingsolutions.com/wp-content/uploads/2020/12/cmyk.jpg" 
                  alt="Card Image" class="card-image">
@@ -129,12 +148,32 @@
                 or any other relevant information.</p>
             </div>
         </div>
-
-        <div class="info-card2">
+        
+        <div class="info-card">
             <img src="https://media.brainly.com/image/rs:fill/w:750/q:75/plain/https://us-static.z-dn.net/files/d12/b8f195bae18562e7cd9cfe23a573d955.jpg" alt="Card Image" class="card-image2">
         </div>
     </div>
-   
+    
+    
+    
+    <div class="card-container">
+        <div class="card-wrapper">
+            <h3 class="card-header" style="margin-top: 10px">Overview</h3>
+            <div class="info-card">
+                <div class="card-content">
+                    <p>This is some descriptive text for the info card. It can include more details, links, 
+                    or any other relevant information.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-wrapper">
+            <h3 class="card-header" style="margin-top: 10px">August Top Expenses</h3>
+            <div class="info-card">
+                <img src="https://media.brainly.com/image/rs:fill/w:750/q:75/plain/https://us-static.z-dn.net/files/d12/b8f195bae18562e7cd9cfe23a573d955.jpg" alt="Card Image" class="card-image2">
+            </div>
+        </div>
+    </div>
     
     
 </body>
