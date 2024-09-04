@@ -65,7 +65,13 @@
         }
         
         .money{
+            font-family:"Apple Braille";
+            font-size: 3rem;
             margin: 0;
+        }
+        
+        .money span{
+            font-size: 1.2rem;
         }
         
         form{
@@ -74,8 +80,9 @@
         
         form input{
             width: 100%;
+            font-family:"Apple Braille", Arial, sans-serif;
             background-color: transparent;
-            color: #ddd;
+            color: #0077ED;
             border: 2px solid #ddd;
             padding: 2px 5px;
             border-radius: 5px;
@@ -89,6 +96,7 @@
         
         form button{
             width: 100%;
+            font-family:"Apple Braille", Arial, sans-serif;
             transition: all 0.4s ease;
             margin-top: 5px;
             border-radius: 5px;
@@ -153,6 +161,8 @@
         
     </style>
 </head>
+
+
 <body>
     <div>
         <nav class="tab-bar">
@@ -168,6 +178,7 @@
         <h2 class="money">$400<span>.00</span></h2>
         <form>
             <div class="basic">
+                <input type="number" placeholder="cost">
                 <input type="text" placeholder="purchase">
                 <input type="datetime-local">
             </div>
