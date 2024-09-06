@@ -39,4 +39,4 @@ class CreateAccountPage(Page):
         return render(request, "create_account.html")
 
     def post(self, request):
-        return redirect("/home/")
+        return render(request, "login_page.html")
