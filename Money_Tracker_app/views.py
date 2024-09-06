@@ -33,3 +33,10 @@ class LoginPage(Page):
 class HomePage(Page):
     def get(self, request):
         return render(request, "home_page.html")
+
+class CreateAccountPage(Page):
+    def get(self, request):
+        return render(request, "create_account.html")
+
+    def post(self, request):
+        return redirect("/home/")

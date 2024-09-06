@@ -6,6 +6,10 @@
     
     <style>
         
+        *{
+            box-sizing: border-box;
+        }
+        
         .form-container {
             display: flex;
             flex-direction: column;
@@ -22,6 +26,7 @@
         
 
         .input {
+            flex: 1;
             margin: 10px 0; /* Adds space between the input fields */
             padding: 10px; /* Adds padding inside the input fields */
             width: 200px; /* Sets a fixed width for the input fields */
@@ -47,6 +52,13 @@
             color: #fff;
             background-color: #0077ED;
         }
+        
+        form div.basic{
+            display: flex;
+            gap: 15px;
+            margin-bottom: 5px;
+        }
+        
     </style>
     
 </head>
@@ -55,15 +67,14 @@
         <h1 class="title"> Saving For The Future </h1>
         <form action="/" method="post">
         {% csrf_token %}
-        <table>
-            <tr>
+            <div class="basic">    
                 <input type="text" name="username" class="input" placeholder="Username">
-            </tr>
-            <tr>
                 <input type="password" name="password" class="input" placeholder="Password">
-            </tr>
-        </table>
-        <button type="submit" id="button">Log In</button>    
+            </div>
+            <div class="basic">
+                <button type="submit" id="button">Log In</button>
+                <button type="button" id="button" onclick="window.location.href=/create_account/">Create Account</button>
+            </div>    
         {#<input type="submit" id="button">#}
         </form>
     </div>

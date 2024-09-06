@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Money_Tracker_app.views import LoginPage, HomePage
+from Money_Tracker_app.views import LoginPage, HomePage, CreateAccountPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', LoginPage.as_view()),
     path('home/', HomePage.as_view()),
+    path('create_account/', CreateAccountPage.as_view()),
+
 ]

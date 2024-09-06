@@ -53,8 +53,116 @@
             font-family: "Apple Braille", Arial, serif;
             font-size: medium;
         }
+        
+        *{
+            box-sizing: border-box;
+        }
+        
+        .main{
+            max-width: 360px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .money{
+            font-family:"Apple Braille";
+            font-size: 3rem;
+            margin: 0;
+        }
+        
+        .money span{
+            font-size: 1.2rem;
+        }
+        
+        form{
+            margin-top: 20px;
+        }
+        
+        form input{
+            width: 100%;
+            font-family:"Apple Braille", Arial, sans-serif;
+            background-color: transparent;
+            color: #0077ED;
+            border: 2px solid #ddd;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        
+        form div.basic{
+            display: flex;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+        
+        form button{
+            width: 100%;
+            font-family:"Apple Braille", Arial, sans-serif;
+            transition: all 0.4s ease;
+            margin-top: 5px;
+            border-radius: 5px;
+            padding: 5px;
+            border-color: #0077ED;
+            background-color: transparent;
+            color: #0077ED;
+        }
+        
+        form button:hover{
+            cursor: pointer;
+            color: #fff;
+            background-color: #0077ED;
+        }
+        
+        div.transactions{
+            margin-top: 15px;
+        }
+        
+        div.transaction{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-top: 1px solid #ddd;
+        }
+        
+        div.transaction:first-child{
+            border-top: 0;
+        }
+        
+        div.transaction div.name{
+            font-size: 1.2rem;
+        }
+        
+        div.transaction div.description{
+            font-size: .7rem;
+            color: #888;
+        }
+        
+        div.right{
+            text-align: right;
+        }
+        
+        div.left{
+            text-align: left;
+        }
+        
+        div.price.green{
+            color: #1c1;
+        }
+        
+        div.price.red{
+            color: #c11;
+        }
+        
+        div.transaction div.datetime{
+            font-size: .7rem;
+            color: #888;
+        }
+        
+        
+        
     </style>
 </head>
+
+
 <body>
     <div>
         <nav class="tab-bar">
@@ -66,58 +174,56 @@
     <h1 class="top-header">Welcome!</h1>
     <h2 class="sub-header">August 20, 2024</h2>
     
-    <h2>$400<span>.00</span></h2>
-    <form>
-        <div class="basic">
-            <input type="text" placeholder="purchase">
-            <input type="datetime-local">
-        </div>
-        <div class="description">
-            <input type="text" placeholder="description">
-        </div>
-        <button type="submit">Add New Transaction</button>
-        
-        <div class="transactions">
-            <div class="transaction">
-                <div class="left">
-                    <div class="name">New Iphone</div>
-                    <div class="description">time for an upgrade</div>
+    <div class="main">
+        <h2 class="money">$400<span>.00</span></h2>
+        <form>
+            <div class="basic">
+                <input type="number" placeholder="cost">
+                <input type="text" placeholder="purchase">
+                <input type="datetime-local">
+            </div>
+            <div class="description">
+                <input type="text" placeholder="description">
+            </div>
+            <button type="submit">Add New Transaction</button>
+            
+            <div class="transactions">
+                
+                <div class="transaction">
+                    <div class="left">
+                        <div class="name">New IPhone</div>
+                        <div class="description">time for an upgrade</div>
+                    </div>
+                    <div class="right">
+                        <div class="price red">-$900</div>
+                        <div class="datetime">10/12/2024 12:30</div>
+                    </div>
                 </div>
-                <div class="right">
-                    <div class="price"> $900</div>
-                    <div class="datetime">10/12/2024 12:30</div>
+            
+                <div class="transaction">
+                    <div class="left">
+                        <div class="name">Paycheck</div>
+                        <div class="description">time for an upgrade</div>
+                    </div>
+                    <div class="right">
+                        <div class="price green">+$700</div>
+                        <div class="datetime">10/12/2024 12:30</div>
+                    </div>
+                </div>
+            
+                <div class="transaction">
+                    <div class="left">
+                        <div class="name">Shoes</div>
+                        <div class="description">time for an upgrade</div>
+                    </div>
+                    <div class="right">
+                        <div class="price red">-$200</div>
+                        <div class="datetime">10/12/2024 12:30</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="transactions">
-            <div class="transaction">
-                <div class="left">
-                    <div class="name">New Iphone</div>
-                    <div class="description">time for an upgrade</div>
-                </div>
-                <div class="right">
-                    <div class="price"> $900</div>
-                    <div class="datetime">10/12/2024 12:30</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="transactions">
-            <div class="transaction">
-                <div class="left">
-                    <div class="name">New Iphone</div>
-                    <div class="description">time for an upgrade</div>
-                </div>
-                <div class="right">
-                    <div class="price"> $900</div>
-                    <div class="datetime">10/12/2024 12:30</div>
-                </div>
-            </div>
-        </div>
-        
-    </form>
-    
+        </form>
+    </div>
    
     
 </body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        
+        .main{
+            max-width: 360px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        form input{
+            width: 100%;
+            font-family:"Apple Braille", Arial, sans-serif;
+            background-color: transparent;
+            color: #0077ED;
+            border: 2px solid #ddd;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        
+            #button {
+            margin-top: 7px;
+            transition: all 0.4s ease;
+            font-size: 15px;
+            font-family: "Apple Braille";
+            padding: 10px;
+            width: 210px;
+            color: #0077ED;
+            background-color: Transparent;
+            border-color: #0077ED;/* top | right | bottom | left */
+            border-width:1px 1px 1px 1px;
+            border-radius: 20px;
+        }
+        
+        #button:hover {
+            cursor: pointer;
+            color: #fff;
+            background-color: #0077ED;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <h1>Create Account Page!</h1>
+    <form>
+        {% csrf_token %}
+        <div class="user">
+            <input type="text" name="username" class="input" placeholder="Username">
+            <input type="password" name="password" class="input" placeholder="Password">
+        </div>
+        <div class="personal">
+            <input type="text" name="first_name" class="input" placeholder="First Name">
+            <input type="text" name="last_name" class="input" placeholder="Last Name">
+        </div>
+        <button type="submit" id="button">Create Account</button>
+        <button type="button" id="button" onclick="window.location.href=/login_page/">Back</button>
+    </form>
+</div>
+</body>
+</html>
